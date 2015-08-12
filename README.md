@@ -1,6 +1,6 @@
 UIView+Bounds
 ========
-Simple UIView's category that calculates and resizes our subclasses (UIButton, UILabel, UITextField) to its given content size.
+Simple UIView's category that calculates and resizes subclasses (UIButton, UILabel, UITextField) to its given content size.
 
 Installation
 --------
