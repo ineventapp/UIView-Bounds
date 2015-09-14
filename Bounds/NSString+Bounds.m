@@ -11,12 +11,12 @@
 
 @implementation NSString (Bounds)
 
-- (CGFloat)getProbableHeightWithFont:(UIFont *)font withSize:(CGSize)size {
-    return [[[NSAttributedString alloc] initWithString:self attributes:@{NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blackColor]}] getProbableHeightWithSize:size];
+- (CGFloat)getProbableHeightWithFont:(UIFont *)font forHorizontalConstrain:(CGFloat)width {
+    return [[[NSAttributedString alloc] initWithString:self attributes:@{NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blackColor]}] getProbableHeightForHorizontalConstrain:width];
 }
 
-- (CGFloat)getProbableWidthWithFont:(UIFont *)font withSize:(CGSize)size {
-        return [[[NSAttributedString alloc] initWithString:self attributes:@{NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blackColor]}] getProbableWidthWithSize:size];
+- (CGFloat)getProbableWidthWithFont:(UIFont *)font forHorizontalConstrain:(CGFloat)width {
+        return [[[NSAttributedString alloc] initWithString:self attributes:@{NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blackColor]}] getProbableWidthForHorizontalConstrain:width];
 }
 
 @end

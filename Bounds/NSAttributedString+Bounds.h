@@ -10,7 +10,7 @@
 
 @interface NSAttributedString (Bounds)
 
-- (CGFloat)getProbableHeightWithSize:(CGSize)size;
-- (CGFloat)getProbableWidthWithSize:(CGSize)size;
+- (CGFloat)getProbableHeightForHorizontalConstrain:(CGFloat)width;
+- (CGFloat)getProbableWidthForHorizontalConstrain:(CGFloat)width;
 
 @end

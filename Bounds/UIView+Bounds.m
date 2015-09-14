@@ -59,7 +59,7 @@
     }
     
     // Calculate final height
-    CGFloat height = [text getProbableHeightWithFont:font withSize:CGSizeMake(self.frame.size.width - 8.0f, 5000.0f)];
+    CGFloat height = [text getProbableHeightWithFont:font forHorizontalConstrain:self.frame.size.width];
     
     // Since it's a textView, we should add an extra padding
     if ([self isKindOfClass:[UITextView class]]) {
@@ -112,7 +112,7 @@
     }
     
     // Calculate final height
-    CGFloat height = [text getProbableHeightWithSize:CGSizeMake(self.frame.size.width - 8.0f, 5000.0f)];
+    CGFloat height = [text getProbableHeightForHorizontalConstrain:self.frame.size.width];
     
     // Since it's a textView, we should add an extra padding
     if ([self isKindOfClass:[UITextView class]]) {

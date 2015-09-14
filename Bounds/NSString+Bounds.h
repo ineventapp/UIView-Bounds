@@ -10,7 +10,7 @@
 
 @interface NSString (Bounds)
 
-- (CGFloat)getProbableHeightWithFont:(UIFont *)font withSize:(CGSize)size;
-- (CGFloat)getProbableWidthWithFont:(UIFont *)font withSize:(CGSize)size;
+- (CGFloat)getProbableHeightWithFont:(UIFont *)font forHorizontalConstrain:(CGFloat)width;
+- (CGFloat)getProbableWidthWithFont:(UIFont *)font forHorizontalConstrain:(CGFloat)width;
 
 @end

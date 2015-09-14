@@ -10,12 +10,12 @@
 
 @implementation NSAttributedString (Bounds)
 
-- (CGFloat)getProbableHeightWithSize:(CGSize)size {
-    return [self getProbableRectWithSize:size].size.height;
+- (CGFloat)getProbableHeightForHorizontalConstrain:(CGFloat)width {
+    return [self getProbableRectWithSize:CGSizeMake(width, 9000.0f)].size.height;
 }
 
-- (CGFloat)getProbableWidthWithSize:(CGSize)size {
-    return [self getProbableRectWithSize:size].size.width;
+- (CGFloat)getProbableWidthForHorizontalConstrain:(CGFloat)width {
+    return [self getProbableRectWithSize:CGSizeMake(width, 9000.0f)].size.width;
 }
 
 - (CGRect)getProbableRectWithSize:(CGSize)size {
