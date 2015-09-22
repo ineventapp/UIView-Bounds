@@ -61,14 +61,15 @@
     // Calculate final height
     CGFloat height = [text getProbableHeightWithFont:font forHorizontalConstrain:self.frame.size.width];
     
-    // Since it's a textView, we should add an extra padding
+    // Since it's a textView, we should remove default padding
     if ([self isKindOfClass:[UITextView class]]) {
-        height += 8.0f;
+        ((UITextView *)self).textContainer.lineFragmentPadding = 0;
+        ((UITextView *)self).textContainerInset = UIEdgeInsetsZero;
     }
     
     // Update frame and contentSize
     if (resize) {
-        CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, ((height <= 5.0f || height > mininumHeight) ? height : mininumHeight));
+        CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, ((height > mininumHeight) ? height : mininumHeight));
         (masterView) ? [masterView updateView:self toFrame:frame] : [self setFrame:frame];
     }
     
@@ -114,14 +115,15 @@
     // Calculate final height
     CGFloat height = [text getProbableHeightForHorizontalConstrain:self.frame.size.width];
     
-    // Since it's a textView, we should add an extra padding
+    // Since it's a textView, we should remove default padding
     if ([self isKindOfClass:[UITextView class]]) {
-        height += 8.0f;
+        ((UITextView *)self).textContainer.lineFragmentPadding = 0;
+        ((UITextView *)self).textContainerInset = UIEdgeInsetsZero;
     }
     
     // Update frame and contentSize
     if (resize) {
-        CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, ((height <= 5.0f || height > mininumHeight) ? height : mininumHeight));
+        CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, ((height > mininumHeight) ? height : mininumHeight));
         (masterView) ? [masterView updateView:self toFrame:frame] : [self setFrame:frame];
     }
     
